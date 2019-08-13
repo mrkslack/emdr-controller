@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:paddingTop="16dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp">
+
+        <Switch
+            android:id="@+id/swConnect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:text="Connetti" />
+
+        <TextView
+            android:id="@+id/textStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_below="@+id/swConnect"
+            android:text="Disconnesso"
+            android:textColor="#888888" />
+
+        <RelativeLayout
+            android:id="@+id/grpStart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible">
+
+            <com.akaita.android.circularseekbar.CircularSeekBar
+                android:id="@+id/seekStart"
+                android:layout_width="256dp"
+                android:layout_height="256dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                app:enabled="true"
+                app:innerCircleColor="#ff3232"
+                app:max="100"
+                app:min="1"
+                app:progress="1"
+                app:progressText="Avvia"
+                app:progressTextColor="#480000"
+                app:progressTextSize="30"
+                app:ringColor="@color/colorAccent"
+                app:ringWidth="0.5"
+                app:showIndicator="true"
+                app:showInnerCircle="true"
+
+                app:showProgressText="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/grpSpeeder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible">
+
+            <com.akaita.android.circularseekbar.CircularSeekBar
+                android:id="@+id/seekSpeed"
+                android:layout_width="256dp"
+                android:layout_height="256dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                app:enabled="true"
+                app:innerCircleColor="#00ee00"
+                app:max="100"
+                app:min="1"
+                app:progress="50"
+                app:progressTextColor="#004800"
+                app:progressTextSize="34"
+                app:ringColor="@color/colorAccent"
+                app:ringWidth="0.5"
+                app:showIndicator="true"
+                app:showInnerCircle="true"
+
+                app:showProgressText="true"
+                app:speedMultiplier="4" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="4dp"
+            app:srcCompat="@drawable/elsaglug" />
+
+
+    </RelativeLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>
